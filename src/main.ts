@@ -8,5 +8,11 @@ if (environment.production) {
   enableProdMode();
 }
 
+import Amplify from 'aws-amplify';
+
+var awsconfig = {};
+
+Amplify.configure(awsconfig);
+
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
